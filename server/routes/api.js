@@ -51,9 +51,8 @@ router.get('/v1/products/:id', (req, res, next) => {
 
 //Put route for product via ID, updating price
 router.put('/v1/products/:id/price', (req, res, next) => {
-
   var id = req.params.id
-  var price = req.params.price
+  var price = req.query.price
   var last_modified = (Date.now() / 1000).toFixed()
 
   // Do a quick check if the given id exists
