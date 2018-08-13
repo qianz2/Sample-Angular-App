@@ -46,16 +46,23 @@ router.get('/v1/products/:id', (req, res, next) => {
   res.status(200).send(data[id])
 })
 
-//Put route for product via ID
-router.put('/v1/products/:id', (req, res, next) => {
+//Put route for product via ID, updating price
+router.put('/v1/products/:id/price', (req, res, next) => {
+
   var id = req.params.id
-  // Do a quick check if the given id was deleted
-  // If it is, assume bad client request to update defunct product
+  var price = req.params.price
+  var last_modified = Date.now()
+
+  // Do a quick check if the given id exists
+  // If it doesn't, assume bad client request to update defunct product
   if (!data[id]){
     const error = new Error('Missing Product ID')
     error.httpStatusCode = 404
     return next(error)
   }
+
+  data[id]["price"] = price
+  data[id]["last_modified"] = last_modified
 
   // Send the new object back in our response
   res.status(200).send(data[id])
