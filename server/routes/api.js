@@ -13,7 +13,7 @@ router.get('/', (req, res, next) => {
 });
 
 //Get route for all products
-router.get('/v1/product', (req, res, next) => {
+router.get('/v1/products', (req, res, next) => {
 
   //data should ALWAYS exist, even as an empty object
   //So if it's null, 500.
@@ -28,7 +28,7 @@ router.get('/v1/product', (req, res, next) => {
 
 //Get route for product via ID
 //Returns single product at given id
-router.get('/v1/product/:id', (req, res, next) => {
+router.get('/v1/products/:id', (req, res, next) => {
   var id = req.params.id
 
   // Do a quick check if the given id was deleted
@@ -43,7 +43,7 @@ router.get('/v1/product/:id', (req, res, next) => {
 })
 
 //Put route for product via ID
-router.put('/v1/product/:id', (req, res, next) => {
+router.put('/v1/products/:id', (req, res, next) => {
   var id = req.params.id
   // Do a quick check if the given id was deleted
   // If it is, assume bad client request to update defunct product
@@ -58,7 +58,7 @@ router.put('/v1/product/:id', (req, res, next) => {
 })
 
 //Delete route for product via ID
-router.delete('/v1/product/:id', (req, res, next) => {
+router.delete('/v1/products/:id', (req, res, next) => {
   var id = req.params.id
   // Do a quick check if the given id exists
   // If it is, assume bad client request to delete defunct product
