@@ -27,7 +27,7 @@ router.get('/v1/products', (req, res, next) => {
   //Not very ideal as an iterable, so we map to an array with ids added
   //This mimics the original data structure as given
   dataArray = Object.keys(data).map(i => Object.assign({}, {'id' : i}, data[i]))
-  res.send(dataArray)
+  res.send({"products" : dataArray})
 })
 
 //Get route for product via ID
