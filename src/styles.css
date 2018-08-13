@@ -1,1 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
+.products-head > th {
+  color: #808080;
+  font-size: 12px;
+  padding:15px 20px 0px 20px;
+}
+
+.products-row > td{
+  padding:20px;
+  border-top:1px solid #d0d0d0;
+  border-bottom:1px solid #d0d0d0;
+  border-radius:0px;
+}
+
+.products-row > td.left-border{
+  border-left: 1px solid #d0d0d0
+}
+
+.products-row > td.right-border{
+  border-right: 1px solid #d0d0d0
+}
+
+.product-td{
+  border-right: 1px solid #d0d0d0;
+}
+
+.product-img{
+  height: 18px;
+  vertical-align: middle;
+}
+
+.product-name{
+  margin-left:-35px;
+}
+
+.products-row {
+  border: 1px solid #d0d0d0;
+  margin-bottom: 10px;
+}
+
+.products-table {
+  border-spacing: 0px 10px;
+  border-collapse: separate;
+}
