@@ -24,13 +24,17 @@
   border-right: 1px solid #d0d0d0;
 }
 
+.product-img-td{
+  /* A little hacky, but forces minimum td width possible */
+  width:1px;
+}
+
 .product-img{
   height: 18px;
   vertical-align: middle;
 }
 
 .product-name{
-  margin-left:-35px;
 }
 
 .products-row {

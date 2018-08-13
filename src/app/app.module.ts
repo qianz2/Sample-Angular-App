@@ -1,16 +1,20 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { MaterializeModule } from 'angular2-materialize';
+import { HttpClientModule } from '@angular/common/http'
+import { BrowserModule } from '@angular/platform-browser'
+import { NgModule} from '@angular/core'
+import { MaterializeModule } from 'angular2-materialize'
+import { AppComponent } from './app.component'
+import { ProductsComponent } from './app.products'
 
-import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
-    MaterializeModule
+    MaterializeModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
