@@ -43,7 +43,10 @@ router.get('/v1/products/:id', (req, res, next) => {
     return next(error)
   }
 
-  res.status(200).send(data[id])
+  // Reformat the object returned to match original data structure
+  var newObject = Object.assign({}, {"id" : id}, data[id])
+
+  res.status(200).send(newObject)
 })
 
 //Put route for product via ID, updating price
@@ -65,7 +68,9 @@ router.put('/v1/products/:id/price', (req, res, next) => {
   data[id]["last_modified"] = last_modified
 
   // Send the new object back in our response
-  res.status(200).send(data[id])
+  // Reformat the object returned to match original data structure
+  var newObject = Object.assign({}, {"id" : id}, data[id])
+  res.status(200).send(newObject)
 })
 
 //Delete route for product via ID
