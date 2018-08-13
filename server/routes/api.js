@@ -23,7 +23,11 @@ router.get('/v1/products', (req, res, next) => {
     return next(error)
   }
 
-  res.send(data)
+  //data should always exist as a object with keys corresponding to product ID's
+  //Not very ideal as an iterable, so we map to an array with ids added
+  //This mimics the original data structure as given
+  dataArray = Object.keys(data).map(i => Object.assign({}, {'id' : i}, data[i]))
+  res.send(dataArray)
 })
 
 //Get route for product via ID
