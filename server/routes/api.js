@@ -51,7 +51,7 @@ router.put('/v1/products/:id/price', (req, res, next) => {
 
   var id = req.params.id
   var price = req.params.price
-  var last_modified = Date.now()
+  var last_modified = (Date.now() / 1000).toFixed()
 
   // Do a quick check if the given id exists
   // If it doesn't, assume bad client request to update defunct product
