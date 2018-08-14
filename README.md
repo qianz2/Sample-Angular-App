@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Public Viewing
 
-This application is live at [app.cschaufe.io] (http://app.cschaufe.io/).
+This application is live at [app.cschaufe.io](http://app.cschaufe.io/).
 
 It currently restarts every day at UTC Midnight.
 
