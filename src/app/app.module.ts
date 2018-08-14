@@ -4,7 +4,7 @@ import { NgModule} from '@angular/core'
 import { MaterializeModule } from 'angular2-materialize'
 import { AppComponent } from './app.component'
 import { ProductsComponent } from './app.products'
-
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,7 +14,8 @@ import { ProductsComponent } from './app.products'
   imports: [
     BrowserModule,
     MaterializeModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

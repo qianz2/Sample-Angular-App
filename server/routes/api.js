@@ -84,7 +84,7 @@ router.delete('/v1/products/:id', (req, res, next) => {
   }
 
   delete data[id]
-  // Send the new object back in our response
+  // Send  a success status
   res.status(204).end()
 })
 

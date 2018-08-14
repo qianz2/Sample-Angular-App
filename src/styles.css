@@ -17,11 +17,21 @@
 }
 
 .products-row > td.right-border{
-  border-right: 1px solid #d0d0d0
+  border-right: 1px solid #d0d0d0;
+  /* A little hacky, but forces minimum td width possible */
+  width: 1px;
 }
 
 .product-td{
   border-right: 1px solid #d0d0d0;
+}
+
+.price-edit{
+  cursor: pointer;
+  height: 1rem !important;
+  margin: 0 !important;
+  border-bottom: 0px !important;
+  max-width:60px !important;
 }
 
 .product-img-td{
@@ -45,4 +55,16 @@
 .products-table {
   border-spacing: 0px 10px;
   border-collapse: separate;
+}
+
+.products-icon.save{
+  cursor:pointer;
+  font-size:24px;
+  vertical-align:middle;
+}
+
+.products-icon.delete{
+  cursor:pointer;
+  font-size:24px;
+  vertical-align:middle;
 }
