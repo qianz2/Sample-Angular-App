@@ -18,7 +18,6 @@ It currently restarts every day at UTC Midnight.
 - From that directory, run `ng build` to build the project.
 - Then, run `npm start`.
 - The webapp should be viewable at `localhost:80`.
-- Relevant API routes are accessible at `localhost/api`. 
 
 ## Deploying and Running Locally (Windows)
 
