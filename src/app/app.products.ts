@@ -107,11 +107,20 @@ export class ProductsComponent implements OnInit {
       let numericPrice = this.productPrices[id]
       let queryString = encodeURI('/api/v1/products/' + id + '?price=' + numericPrice)
       console.log(queryString)
-      //This should have some minor error handling/success confirmation on it
-      this.http.put('/api/v1/products/' + id + '/price?price=' + numericPrice, null).subscribe()
+
+      //TODO: This should have some minor error handling on it
+      this.http.put('/api/v1/products/' + id + '/price?price=' + numericPrice, null).subscribe( value => {
+      console.log(value)
+        for(var product in this.products) {
+          if(this.products[product]["id"] == value["id"]) {
+            this.products[product]["price"] = value["price"]
+            this.productPrices[value["id"]] = value["price"]
+          }
+        }
+      })
     }
 
-    //Delete product deletes id at modalDelete
+    //This function deletes id at modalDelete
     deleteProduct() {
       let id = this.modalDelete
       console.log("/api/v1/products/" + id)
