@@ -5,45 +5,8 @@ import { MaterializeAction } from 'angular2-materialize';
 @Component({
   selector: 'products-list',
   template: `
-  <table class="products-table">
-   <thead>
-     <tr class="products-head">
-       <th>PRODUCT</th>
-       <!--Product text spacer-->
-       <th></th>
-       <th>PRICE</th>
-       <th>CODE</th>
-       <th>CREATED BY</th>
-       <th>LAST MODIFIED</th>
-       <th></th>
-       <th></th>
-     </tr>
-   </thead>
-   <tbody>
-     <tr class="products-row" *ngFor="let product of products; let index = index;">
-       <td class="left-border product-img-td"><img class="product-img" src="assets/{{product.code}}.jpg"/></td>
-       <td class="product-td"><span class="product-name">Parby Warker {{product.name}}</span></td>
-       <td>
-         <input class="price-edit" name="{{product.id}}" id="{{product.id}}" [ngModel]="product.price | currency:'USD':true:'1.2-4'" (ngModelChange)="onChange($event, product.id)" default="0"/>
-       </td>
-       <td>{{product.code}}</td>
-       <td>{{product.creator}}</td>
-       <td>{{product.last_modified * 1000 | date:'longDate'}}</td>
-       <td><i materialize="tooltip" (click)="sendPriceFromPriceObject(product.id)" class="material-icons products-icon save tooltipped" data-position="bottom" data-tooltip="Save Changes">send</i></td>
-       <td class="right-border"><i materialize="tooltip" href="#delete-confirmation-modal" (click)="openModal(product.id)" class="material-icons products-icon modal-trigger delete tooltipped" data-position="bottom" data-tooltip="Delete Product">delete_forever</i></td>
-     </tr>
-   </tbody>
- </table>
- <div id="delete-confirmation-modal" class="modal bottom-sheet" materialize="modal" [materializeParams]="[{dismissible: false}]" [materializeActions]="modalActions">
-  <div class="modal-content">
-    <h4>Confirm Delete?</h4>
-    <p>You won't be able to undo this action!</p>
-  </div>
-  <div class="modal-footer">
-    <a class="waves-effect waves-green btn-flat" (click)="closeModal()">Cancel</a>
-    <a class="modal-action modal-close waves-effect waves-green btn-flat" (click)="deleteProduct()">Yes, Delete</a>
-  </div>
-</div>`
+  // template goes here
+  `
 
 })
 
