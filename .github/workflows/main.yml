@@ -1,0 +1,12 @@
+name: Angular app
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: App Service Web App Build Action
+      uses: Azure/appservice-build@v2-beta
